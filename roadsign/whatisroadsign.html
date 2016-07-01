@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+<title>Sample Object-Match Question Type: What is Road Sign?</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="application.js"></script>
+</head>
+
+<body onLoad="initialize();">
+<h1>Sample <a href="http://www.sleepingdog.org.uk/learning/question/type/objectmatch">Object-Match Question Type</a>: What is Road Sign?<span class="version" title="version"> (0.2.4.64 beta) <a href="http://www.sleepingdog.org.uk/learning/question/type/objectmatch/example/roadsign/whatisroadsign.html">latest version</a></span></h1>
+<p>Question: What is the road sign for &quot;give way to traffic on major road&quot;?</p>
+<form name="frmDesign" class="section">
+  <h2>Design</h2>
+  <label>Shape
+    <select name="shape" onChange="updateRoadSign('shape','geometry',this.value);">
+      <option value="none">Choose shape:</option>
+      <option value="circle">circle</option>
+      <option value="octagon">octagon</option>
+      <option value="triangle">triangle</option>
+      <option value="inverted triangle">inverted triangle</option>
+    </select>
+  </label>
+  <label>Background
+    <select name="background" onChange="updateRoadSign('background','colour',this.value);">
+      <option value="none">Choose background colour:</option>
+      <option value="white">white</option>
+      <option value="blue">blue</option>
+      <option value="red">red</option>
+      <option value="green">green</option>
+    </select>
+  </label>
+  <label>Border
+    <select name="border" onChange="updateRoadSign('border','colour',this.value);">
+      <option value="none">Choose border colour:</option>
+      <option value="none">none</option>
+      <option value="red">red</option>
+      <option value="black">black</option>
+      <option value="white">white</option>
+    </select>
+  </label>
+  <label>Symbol
+    <select name="shape" onChange="updateRoadSign('symbol','symbolId',this.value);">
+      <option value="none">Choose symbol:</option>
+      <option value="none">none</option>
+      <option value="black car+red car">black car+red car</option>
+      <option value="down+left arrow">down+left arrow</option>
+      <option value="bicycle">bicycle</option>
+    </select>
+  </label>
+  <label>Text
+    <select name="text" onChange="updateRoadSign('text','value',this.value);">
+      <option value="none">Choose text:</option>
+      <option value="none">none</option>
+      <option value="40">40</option>
+      <option value="GIVE WAY">GIVE WAY</option>
+      <option value="STOP">STOP</option>
+    </select>
+  </label>
+  <input type="button" value="submit answer" onClick="acceptAnswer(this);" />
+</form>
+<div id="roadsign" class="section">
+  <h2>Display</h2>
+  <svg version="1.1" x="0px" y="0px" width="240px" height="240px" viewBox="0 0 240 240">
+    <defs>
+      <style type="text/css">
+        <![CDATA[
+    .st1{fill:#F0EFEC;}
+  ]]>
+      </style>
+    </defs>
+    <rect class="st1" width="240" height="240"/>
+  </svg>
+</div>
+<div id="feedback" class="section">
+	<h2>Feedback</h2>
+  <table id="scoretable">
+  	<tr><th>Property</th><th>Your answer</th><th>Correct answer</th><th>Score</th></tr>
+  </table> 
+  <!--score table-->
+</div>
+<form id="frmFeedback" name="frmFeedback">
+	<h2>Developer</h2>
+  <div id="mark" class="nomatch">no match</div> 
+  <textarea id="xmlSource" cols="20" rows="12" label="XML" readonly="readonly" title="application/xml"></textarea>
+	<textarea id="svgSource" cols="20" rows="12" label="SVG" readonly="readonly" title="image/svg+xml"></textarea>
+</form>
+<footer>
+	<p>Download <a href="roadsign.zip">zipped file of code and components</a>.</p>
+	<p>The artwork of traffic signs is covered by a waiver and may therefore be reproduced free of charge, without the need to obtain permission, subject to it being reproduced accurately and not used in a misleading context. The copyright source of the material must also be acknowledged.<br>
+© Crown copyright 2007</p>
+  <p xmlns:dct="http://purl.org/dc/terms/" xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
+    <a rel="license"
+       href="http://creativecommons.org/publicdomain/zero/1.0/">
+      <img src="http://i.creativecommons.org/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0" />
+    </a>
+    <br />
+    To the extent possible under law,
+    <a rel="dct:publisher"
+       href="http://www.sleepingdog.org.uk/learning/question/type/objectmatch/example/roadsign/whatisroadsign.html">
+      <span property="dct:title">Tavis Reddick</span></a>
+    has waived all copyright and related or neighboring rights to
+    <span property="dct:title">Sample Object-Match Question Type: What is Road Sign?</span>.
+  This work is published from:
+  <span property="vcard:Country" datatype="dct:ISO3166"
+        content="GB" about="http://www.sleepingdog.org.uk/learning/question/type/objectmatch/example/roadsign/whatisroadsign.html">
+    United Kingdom</span>.
+  </p>
+</footer>
+</body>
+</html>

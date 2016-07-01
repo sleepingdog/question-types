@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  elementFormDefault="qualified"
+	attributeFormDefault="unqualified" targetNamespace="http://www.sleepingdog.org.uk/roadsign" xmlns="http://www.sleepingdog.org.uk/roadsign">
+	<xs:annotation>
+		<xs:documentation>Road Sign Markup Language 0.1</xs:documentation>
+	</xs:annotation>
+	<xs:element name="roadsign">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="shape">
+					<xs:complexType>
+						<xs:attribute name="geometry">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="none" />
+									<xs:enumeration value="circle"/>
+									<xs:enumeration value="octagon"/>
+									<xs:enumeration value="triangle"/>
+									<xs:enumeration value="inverted triangle"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="background">
+					<xs:complexType>
+						<xs:attribute name="colour">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="none"/>
+									<xs:enumeration value="white"/>
+									<xs:enumeration value="blue"/>
+									<xs:enumeration value="red"/>
+									<xs:enumeration value="green"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="border">
+					<xs:complexType>
+						<xs:attribute name="colour">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="none"/>
+									<xs:enumeration value="red"/>
+									<xs:enumeration value="black"/>
+									<xs:enumeration value="white"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="symbol">
+					<xs:complexType>
+						<xs:attribute name="symbolId">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="none"/>
+									<xs:enumeration value="black car+red car"/>
+									<xs:enumeration value="down+left arrow"/>
+									<xs:enumeration value="bicycle"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="text">
+					<xs:complexType>
+						<xs:attribute name="value">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="none" />
+									<xs:enumeration value="40" />
+									<xs:enumeration value="GIVE WAY" />
+									<xs:enumeration value="STOP" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

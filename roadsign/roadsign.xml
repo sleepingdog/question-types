@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<roadsign xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rsml="http://www.sleepingdog.org.uk/roadsign"
+ xsi:schemaLocation="http://www.sleepingdog.org.uk/roadsign roadsign.xsd" xmlns="http://www.sleepingdog.org.uk/roadsign">
+	<shape geometry="none" />
+	<background colour="none"/>
+	<border colour="none"/>
+	<symbol symbolId="none"/>
+	<text value="none" />
+</roadsign>

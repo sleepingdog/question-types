@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.section {
+	width: 30%;
+	float: left;
+	border: #666666 solid 2px;
+}
+
+label {
+	display: block;
+}
+
+.version {
+	font-size: 50%;
+	color: #999999;
+}
+
+.match {
+	color: #FFFFFF;
+	background-color: #006600;
+}
+
+.nomatch {
+	color: #990000;
+	background-color: #FFFFFF;
+	font-weight: bold;
+}
+
+#frmFeedback, footer {
+	float: left;
+	clear: both;
+	width: 100%;
+}
+
+#scoretable {
+	display: none;
+}
+
+th {
+	text-align: left;
+	color: #CCCCCC;
+	background-color: #333333;
+}
+
+td {
+	border-right: #CCCCCC solid 1px;
+	border-bottom: #CCCCCC solid 1px;
+}
+
